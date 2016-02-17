@@ -19,6 +19,8 @@ public class GalgSolver {
     }
 
     public void solve () {
-        // Jasper Noob
+        while (galg.alive() && !galg.isSolved()) {
+            // Jasper Noob
+        }
     }
 }
