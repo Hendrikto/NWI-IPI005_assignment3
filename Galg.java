@@ -76,7 +76,7 @@ public class Galg {
 
     /**
      * Construct a string from the word replacing not yet guessed characters
-     * with ".". This is used by toString.
+     * with ".".
      *
      * @return A printable representation of the word showing only guessed
      * characters.
