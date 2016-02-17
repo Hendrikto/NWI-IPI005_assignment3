@@ -33,7 +33,7 @@ public class Galg {
      *
      * @return Whether the player still has guesses left.
      */
-    public boolean alive () {
+    public boolean isAlive () {
         return this.fails < this.failThreshold;
     }
 
