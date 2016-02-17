@@ -12,7 +12,7 @@ public class GalgSolver {
     /**
      * Constructor method.
      *
-     * @param galg The galg this solves.
+     * @param galg The galg this tries to solve.
      */
     public GalgSolver (Galg galg) {
         this.galg = galg;
