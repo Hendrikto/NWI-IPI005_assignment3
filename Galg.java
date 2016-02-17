@@ -38,6 +38,15 @@ public class Galg {
     }
 
     /**
+     * Check whether the galg is solved.
+     *
+     * @return Whether there are still letters left to guess for this galg.
+     */
+    public boolean isSolved () {
+        return !this.getRepresentation().contains(".");
+    }
+
+    /**
      * Make a guess.
      *
      * @param s The character to guess.
