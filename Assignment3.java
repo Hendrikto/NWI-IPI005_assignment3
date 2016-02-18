@@ -15,9 +15,23 @@ public class Assignment3 {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        Galg g = new Galg(READER.geefWoord(), 10);
-        System.out.println(g);
-        g.guess("e");
-        System.out.println(g);
+        GalgSolver gs;
+        while (true) {
+            gs = new GalgSolver(new Galg(READER.geefWoord(), 10));
+            informUser(gs.solve());
+        }
+    }
+
+    /**
+     * Inform the user whether he has solved the galg.
+     *
+     * @param b Whether the user has solved the galg.
+     */
+    private static void informUser (boolean b) {
+        if (b) {
+            System.out.println("You solved the word!");
+        } else {
+            System.out.println("You did not solve the word :(");
+        }
     }
 }
