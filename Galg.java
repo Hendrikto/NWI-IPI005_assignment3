@@ -11,6 +11,8 @@ public class Galg {
     private static final WoordLezer READER = new WoordLezer("woorden.txt");
     private String failedGuesses;
     private String successfulGuesses;
+    private String representation;
+    private boolean representationUpToDate;
     private int fails;
     private final String word;
     private final int failThreshold;
@@ -27,6 +29,7 @@ public class Galg {
         this.failThreshold = allowedFails;
         this.failedGuesses = "";
         this.successfulGuesses = "";
+        this.representationUpToDate = false;
     }
 
     /**
@@ -97,6 +100,7 @@ public class Galg {
         }
         if (this.word.contains(s)) {
             this.successfulGuesses = this.successfulGuesses += s;
+            this.representationUpToDate = false;
             return true;
         } else {
             this.failedGuesses = this.failedGuesses += s;
@@ -128,6 +132,9 @@ public class Galg {
      * characters.
      */
     private String getRepresentation () {
+        if (this.representationUpToDate) {
+            return this.representation;
+        }
         StringBuilder sb = new StringBuilder();
         for (char c: this.word.toCharArray()) {
             if (this.successfulGuesses.contains(String.valueOf(c))) {
@@ -136,6 +143,8 @@ public class Galg {
                 sb.append('.');
             }
         }
-        return sb.toString();
+        this.representation = sb.toString();
+        this.representationUpToDate = true;
+        return this.getRepresentation();
     }
 }
