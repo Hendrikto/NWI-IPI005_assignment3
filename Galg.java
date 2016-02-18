@@ -29,7 +29,7 @@ public class Galg {
     }
 
     /**
-     * Constructor method that uses a random word from WoordLezer.
+     * Constructor method helper that uses a random word from WoordLezer.
      *
      * @param allowedFails Maximum number of failed guesses.
      */
