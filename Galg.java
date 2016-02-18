@@ -30,6 +30,16 @@ public class Galg {
     }
 
     /**
+     * Constructor method helper that takes only a word and add the default
+     * allowedFails count.
+     *
+     * @param word The word that solves this.
+     */
+    public Galg (String word) {
+        this(word, DEFAULT_ALLOWED_FAILS);
+    }
+
+    /**
      * Constructor method helper that uses a random word from WoordLezer.
      *
      * @param allowedFails Maximum number of failed guesses.
