@@ -16,20 +16,7 @@ public class Assignment3 {
         GalgSolver gs;
         while (true) {
             gs = new GalgSolver(new Galg(10));
-            informUser(gs.solve());
-        }
-    }
-
-    /**
-     * Inform the user whether he has solved the galg.
-     *
-     * @param b Whether the user has solved the galg.
-     */
-    private static void informUser (boolean b) {
-        if (b) {
-            System.out.println("You solved the word!");
-        } else {
-            System.out.println("You did not solve the word :(");
+            gs.solve();
         }
     }
 }

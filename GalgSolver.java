@@ -32,7 +32,7 @@ public class GalgSolver {
             System.out.print("Enter a letter: ");
             galg.guess(getNextLetter());
         }
-        return galg.isSolved();
+        return informUser(galg.isSolved());
     }
 
     /**
@@ -43,5 +43,19 @@ public class GalgSolver {
      */
     private static String getNextLetter () {
         return String.valueOf(SCANNER.nextLine().charAt(0)).toLowerCase();
+    }
+
+    /**
+     * Inform the user whether he has solved the galg.
+     *
+     * @param b Whether the user has solved the galg.
+     */
+    private static boolean informUser (boolean b) {
+        if (b) {
+            System.out.println("You solved the word!");
+        } else {
+            System.out.println("You did not solve the word :(");
+        }
+        return b;
     }
 }
