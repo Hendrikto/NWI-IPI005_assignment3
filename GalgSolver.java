@@ -1,5 +1,7 @@
 package assignment3;
 
+import java.util.Scanner;
+
 /**
  * Contains user interaction for solving galgs.
  *
@@ -7,6 +9,7 @@ package assignment3;
  * @author Jasper Haasdijk // s4449754
  */
 public class GalgSolver {
+    private static final Scanner SCANNER = new Scanner(System.in);
     private final Galg galg;
 
     /**
@@ -22,5 +25,9 @@ public class GalgSolver {
         while (galg.isAlive() && !galg.isSolved()) {
             // Jasper Noob
         }
+    }
+
+    private static String getNextLetter () {
+        return String.valueOf(SCANNER.nextLine().charAt(0));
     }
 }
