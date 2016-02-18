@@ -21,10 +21,18 @@ public class GalgSolver {
         this.galg = galg;
     }
 
-    public void solve () {
+    /**
+     * Repeatedly ask the user for input and try to solve the galg with that.
+     *
+     * @return Whether the galg has successfully been solved.
+     */
+    public boolean solve () {
         while (galg.isAlive() && !galg.isSolved()) {
-            // Jasper Noob
+            System.out.print("\n" + galg);
+            System.out.print("Enter a letter: ");
+            galg.guess(getNextLetter());
         }
+        return galg.isSolved();
     }
 
     /**
