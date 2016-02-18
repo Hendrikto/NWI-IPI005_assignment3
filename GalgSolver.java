@@ -27,6 +27,12 @@ public class GalgSolver {
         }
     }
 
+    /**
+     * Get a char from the user, convert it to a String and turn it to lower
+     * case.
+     *
+     * @return One char long String consisting of a lower case letter.
+     */
     private static String getNextLetter () {
         return String.valueOf(SCANNER.nextLine().charAt(0)).toLowerCase();
     }
