@@ -17,8 +17,7 @@ public class Galg {
      * Constructor method.
      *
      * @param word The word that solves this.
-     * @param allowedFails The number of times the user is allowed to guess
-     * wrong.
+     * @param allowedFails Maximum number of failed guesses.
      */
     public Galg (String word, int allowedFails) {
         this.word = word;
