@@ -28,6 +28,6 @@ public class GalgSolver {
     }
 
     private static String getNextLetter () {
-        return String.valueOf(SCANNER.nextLine().charAt(0));
+        return String.valueOf(SCANNER.nextLine().charAt(0)).toLowerCase();
     }
 }
