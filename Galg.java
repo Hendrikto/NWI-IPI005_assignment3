@@ -38,6 +38,14 @@ public class Galg {
     }
 
     /**
+     * Constructor method helper that adds a default allowedFails count of 10.
+     *
+     */
+    public Galg () {
+        this(10);
+    }
+
+    /**
      * Check whether the player is still alive.
      *
      * @return Whether the player still has guesses left.
