@@ -7,6 +7,7 @@ package assignment3;
  * @author Jasper Haasdijk // s4449754
  */
 public class Galg {
+    private static final int DEFAULT_ALLOWED_FAILS = 10;
     private static final WoordLezer READER = new WoordLezer("woorden.txt");
     private String failedGuesses;
     private String successfulGuesses;
@@ -38,11 +39,11 @@ public class Galg {
     }
 
     /**
-     * Constructor method helper that adds a default allowedFails count of 10.
+     * Constructor method helper that adds the default allowedFails count.
      *
      */
     public Galg () {
-        this(10);
+        this(DEFAULT_ALLOWED_FAILS);
     }
 
     /**
