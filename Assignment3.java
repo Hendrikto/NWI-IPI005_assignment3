@@ -15,7 +15,7 @@ public class Assignment3 {
     public static void main(String[] args) {
         GalgSolver gs;
         while (true) {
-            gs = new GalgSolver(new Galg(10));
+            gs = new GalgSolver(new Galg());
             gs.solve();
         }
     }
