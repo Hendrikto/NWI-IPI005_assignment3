@@ -56,6 +56,15 @@ public class Galg {
     }
 
     /**
+     * Getter method for this.word.
+     *
+     * @return this.word.
+     */
+    public String getWord() {
+        return this.word;
+    }
+
+    /**
      * Make a guess.
      *
      * @param s The character to guess.
