@@ -7,8 +7,6 @@ package assignment3;
  * @author Jasper Haasdijk // s4449754
  */
 public class Assignment3 {
-    private static final WoordLezer READER = new WoordLezer("woorden.txt");
-
     /**
      * Entry point.
      *
@@ -17,7 +15,7 @@ public class Assignment3 {
     public static void main(String[] args) {
         GalgSolver gs;
         while (true) {
-            gs = new GalgSolver(new Galg(READER.geefWoord(), 10));
+            gs = new GalgSolver(new Galg(10));
             informUser(gs.solve());
         }
     }

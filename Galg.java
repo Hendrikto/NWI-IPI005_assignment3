@@ -7,6 +7,7 @@ package assignment3;
  * @author Jasper Haasdijk // s4449754
  */
 public class Galg {
+    private static final WoordLezer READER = new WoordLezer("woorden.txt");
     private String failedGuesses;
     private String successfulGuesses;
     private int fails;
@@ -25,6 +26,15 @@ public class Galg {
         this.failThreshold = allowedFails;
         this.failedGuesses = "";
         this.successfulGuesses = "";
+    }
+
+    /**
+     * Constructor method that uses a random word from WoordLezer.
+     *
+     * @param allowedFails Maximum number of failed guesses.
+     */
+    public Galg (int allowedFails) {
+        this(READER.geefWoord(), allowedFails);
     }
 
     /**
