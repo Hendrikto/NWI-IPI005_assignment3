@@ -24,7 +24,7 @@ public class Galg {
      * @param allowedFails Maximum number of failed guesses.
      */
     public Galg (String word, int allowedFails) {
-        this.word = word;
+        this.word = word.toLowerCase();
         this.fails = 0;
         this.failThreshold = allowedFails;
         this.failedGuesses = "";
