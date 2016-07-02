@@ -22,7 +22,7 @@ public class Galg {
      * @param word The word that solves this.
      * @param allowedFails Maximum number of failed guesses.
      */
-    public Galg (String word, int allowedFails) {
+    public Galg(String word, int allowedFails) {
         this.word = word.toLowerCase();
         this.fails = 0;
         this.failThreshold = allowedFails;
@@ -36,7 +36,7 @@ public class Galg {
      *
      * @param word The word that solves this.
      */
-    public Galg (String word) {
+    public Galg(String word) {
         this(word, DEFAULT_ALLOWED_FAILS);
     }
 
@@ -45,7 +45,7 @@ public class Galg {
      *
      * @param allowedFails Maximum number of failed guesses.
      */
-    public Galg (int allowedFails) {
+    public Galg(int allowedFails) {
         this(READER.geefWoord(), allowedFails);
     }
 
@@ -53,7 +53,7 @@ public class Galg {
      * Constructor method helper that adds the default allowedFails count.
      *
      */
-    public Galg () {
+    public Galg() {
         this(DEFAULT_ALLOWED_FAILS);
     }
 
@@ -62,7 +62,7 @@ public class Galg {
      *
      * @return Whether the player still has guesses left.
      */
-    public boolean isAlive () {
+    public boolean isAlive() {
         return this.fails < this.failThreshold;
     }
 
@@ -71,7 +71,7 @@ public class Galg {
      *
      * @return Whether there are still letters left to guess for this galg.
      */
-    public boolean isSolved () {
+    public boolean isSolved() {
         return !this.getRepresentation().contains(".");
     }
 
@@ -80,7 +80,7 @@ public class Galg {
      *
      * @return this.word.
      */
-    public String getWord () {
+    public String getWord() {
         return this.word;
     }
 
@@ -90,7 +90,7 @@ public class Galg {
      * @param s The character to guess.
      * @return Whether the try was successful.
      */
-    public boolean guess (String s) {
+    public boolean guess(String s) {
         if (this.failedGuesses.contains(s)
                 || this.successfulGuesses.contains(s)) {
             this.fails++;
@@ -112,7 +112,7 @@ public class Galg {
      * @return Printable representation of the current state.
      */
     @Override
-    public String toString () {
+    public String toString() {
         return String.join("\n",
                 String.format("Fails: %d/%d", this.fails, this.failThreshold),
                 String.format("Failed guesses: %s", this.failedGuesses),
@@ -140,4 +140,5 @@ public class Galg {
         }
         return sb.toString();
     }
+
 }

@@ -7,6 +7,7 @@ package assignment3;
  * @author Jasper Haasdijk // s4449754
  */
 public class Assignment3 {
+
     /**
      * Entry point.
      *
@@ -19,4 +20,5 @@ public class Assignment3 {
             gs.solve();
         }
     }
+
 }

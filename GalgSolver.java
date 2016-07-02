@@ -9,6 +9,7 @@ import java.util.Scanner;
  * @author Jasper Haasdijk // s4449754
  */
 public class GalgSolver {
+
     private static final Scanner SCANNER = new Scanner(System.in);
     private final Galg galg;
 
@@ -17,7 +18,7 @@ public class GalgSolver {
      *
      * @param galg The galg this tries to solve.
      */
-    public GalgSolver (Galg galg) {
+    public GalgSolver(Galg galg) {
         this.galg = galg;
     }
 
@@ -26,7 +27,7 @@ public class GalgSolver {
      *
      * @return Whether the galg has successfully been solved.
      */
-    public boolean solve () {
+    public boolean solve() {
         while (galg.isAlive() && !galg.isSolved()) {
             System.out.print("\n" + galg);
             System.out.print("Enter a letter: ");
@@ -41,7 +42,7 @@ public class GalgSolver {
      *
      * @return One char long String consisting of a lower case letter.
      */
-    private static String getNextLetter () {
+    private static String getNextLetter() {
         return String.valueOf(SCANNER.nextLine().charAt(0)).toLowerCase();
     }
 
@@ -50,7 +51,7 @@ public class GalgSolver {
      *
      * @param b Whether the user has solved the galg.
      */
-    private boolean informUser (boolean b) {
+    private boolean informUser(boolean b) {
         if (b) {
             System.out.println("You solved the word: " + this.galg.getWord());
         } else {
@@ -58,4 +59,5 @@ public class GalgSolver {
         }
         return b;
     }
+
 }
