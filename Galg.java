@@ -7,6 +7,7 @@ package assignment3;
  * @author Jasper Haasdijk // s4449754
  */
 public class Galg {
+
     private static final int DEFAULT_ALLOWED_FAILS = 10;
     private static final WoordLezer READER = new WoordLezer("woorden.txt");
     private String failedGuesses;
@@ -79,7 +80,7 @@ public class Galg {
      *
      * @return this.word.
      */
-    public String getWord() {
+    public String getWord () {
         return this.word;
     }
 
@@ -112,12 +113,13 @@ public class Galg {
      */
     @Override
     public String toString () {
-        return new StringBuilder()
-                .append(String.format("Fails: %d/%d\n", this.fails, this.failThreshold))
-                .append(String.format("Failed guesses: %s\n", this.failedGuesses))
-                .append(String.format("Successful guesses: %s\n", this.successfulGuesses))
-                .append(String.format("Representation: %s\n", this.getRepresentation()))
-                .toString();
+        return String.join("\n",
+                String.format("Fails: %d/%d", this.fails, this.failThreshold),
+                String.format("Failed guesses: %s", this.failedGuesses),
+                String.format("Successful guesses: %s", this.successfulGuesses),
+                String.format("Representation: %s\n", this.getRepresentation())
+        );
+
     }
 
     /**
@@ -127,9 +129,9 @@ public class Galg {
      * @return A printable representation of the word showing only guessed
      * characters.
      */
-    private String getRepresentation () {
+    private String getRepresentation() {
         StringBuilder sb = new StringBuilder();
-        for (char c: this.word.toCharArray()) {
+        for (char c : this.word.toCharArray()) {
             if (this.successfulGuesses.contains(String.valueOf(c))) {
                 sb.append(c);
             } else {
