@@ -49,15 +49,15 @@ public class GalgSolver {
     /**
      * Inform the user whether he has solved the galg.
      *
-     * @param b Whether the user has solved the galg.
+     * @param solved Whether the user has solved the galg.
      */
-    private boolean informUser(boolean b) {
-        if (b) {
+    private boolean informUser(boolean solved) {
+        if (solved) {
             System.out.println("You solved the word: " + this.galg.getWord());
         } else {
             System.out.println("You did not solve the word: " + this.galg.getWord());
         }
-        return b;
+        return solved;
     }
 
 }
