@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class GalgSolver {
 
-    private static final Scanner SCANNER = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     private final Galg galg;
 
     /**
@@ -42,8 +42,8 @@ public class GalgSolver {
      *
      * @return One char long String consisting of a lower case letter.
      */
-    private static String getNextLetter() {
-        return String.valueOf(SCANNER.nextLine().charAt(0)).toLowerCase();
+    private String getNextLetter() {
+        return String.valueOf(scanner.nextLine().charAt(0)).toLowerCase();
     }
 
     /**
